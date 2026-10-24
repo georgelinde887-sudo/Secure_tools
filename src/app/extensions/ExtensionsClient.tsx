@@ -24,6 +24,7 @@ import {
   PuzzleIcon,
   SecurityCheckIcon,
   CheckmarkCircle02Icon,
+  Database01Icon,
 } from 'hugeicons-react';
 import { SoftwareItem, Category } from '@/types';
 import { sortSoftwareByEnterpriseRank } from '@/lib/data';
@@ -117,6 +118,7 @@ export function ExtensionsClient({ initialSoftware, categories }: ExtensionsClie
     if (s.includes('sign')) return SignatureIcon;
     if (s.includes('security') || s.includes('encrypt')) return Shield01Icon;
     if (s.includes('data-room') || s.includes('vdr') || s.includes('key')) return Key01Icon;
+    if (s.includes('database') || s.includes('backend')) return Database01Icon;
     return Folder01Icon;
   };
 

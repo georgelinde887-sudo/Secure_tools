@@ -23,6 +23,7 @@ import {
   EyeIcon,
   CpuIcon,
   ScanIcon,
+  Database01Icon,
 } from 'hugeicons-react';
 import { getAllCategories, getPillars } from '@/lib/data';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
@@ -30,7 +31,7 @@ import { HeroBanner } from '@/components/HeroBanner';
 
 export const metadata: Metadata = {
   title: 'Software Categories Taxonomy | SecureTools.live',
-  description: 'Explore the complete category taxonomy covering file sharing, encrypted cloud storage, virtual data rooms, electronic signatures, and PDF security.',
+  description: 'Explore the complete category taxonomy covering file sharing, encrypted cloud storage, virtual data rooms, electronic signatures, database security, and PDF protection.',
   alternates: {
     canonical: 'https://securetools.live/categories',
   }
@@ -95,6 +96,8 @@ function getCategoryIcon(slug: string) {
       return Shield01Icon;
     case 'document-audit-trails':
       return EyeIcon;
+    case 'database-backend-security':
+      return Database01Icon;
 
     // 8. Document Intelligence
     case 'intelligent-document-processing':

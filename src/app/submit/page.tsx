@@ -26,7 +26,8 @@ import {
   FileZipIcon,
   SignatureIcon,
   Briefcase01Icon,
-  EyeIcon
+  EyeIcon,
+  Database01Icon,
 } from 'hugeicons-react';
 import { Puzzle, Plug, Globe, ChevronDown, Check, Webhook, Cpu, Code2, ChevronLeft, ChevronRight, X, Terminal, Database, ClipboardPaste, ClipboardCopy } from 'lucide-react';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
@@ -47,6 +48,7 @@ const getCategoryIcon = (slug?: string) => {
   if (s.includes('share') || s.includes('transfer')) return Shield01Icon;
   if (s.includes('pdf')) return Pdf01Icon;
   if (s.includes('sign')) return SignatureIcon;
+  if (s.includes('database') || s.includes('backend')) return Database01Icon;
   if (s.includes('security') || s.includes('encrypt')) return Shield01Icon;
   if (s.includes('data-room') || s.includes('vdr') || s.includes('key') || s.includes('due-diligence')) return Key01Icon;
   if (s.includes('workflow')) return WorkflowCircle01Icon;
@@ -1371,10 +1373,11 @@ STRICT OUTPUT RULES:
    - No trailing commas.
 
 5. CATEGORY SELECTION & SCOPE MATCH:
-   Does this tool directly fit one of the 24 SecureTools directory categories:
+   Does this tool directly fit one of the 25 SecureTools directory categories:
    [${categorySlugs}]
    - If YES, select the single best matching category slug for "primaryCategory", and set "categoryMatch": true.
-   - If NO (out-of-scope or incompatible industry), set "primaryCategory": "incompatible-category", set "categoryMatch": false, and set "categoryMismatchReason": "Explain why this software does not match any of our 24 secure file sharing, cloud storage, virtual data rooms, document systems, or cybersecurity categories."
+   - For backend-as-a-service platforms, database encryption, database access proxies, secrets managers, and developer cloud storage/database platforms (e.g. Supabase, Firebase, Appwrite, HashiCorp Vault, Neon, Infisical, MongoDB Atlas), select "database-backend-security".
+   - If NO (completely out-of-scope or incompatible industry), set "primaryCategory": "incompatible-category", set "categoryMatch": false, and set "categoryMismatchReason": "Explain why this software does not match any of our 25 secure file sharing, cloud storage, database & backend security, virtual data rooms, document systems, or cybersecurity categories."
 
 6. ALTERNATIVES (REAL COMPETITOR PRODUCT NAMES ONLY):
    Provide ONLY 3 to 5 real, actual competitor commercial or open-source software brand names (e.g. ["DocSend", "Digify", "Tresorit", "Box", "Dropbox Sign"]).
@@ -2029,7 +2032,7 @@ FINAL REMINDER: Return EXACTLY ONE \`\`\`json code block starting with \`\`\`jso
         return;
       }
 
-      // 4. CHECK CATEGORY MATCH: Does this product match one of the 24 SecureTools directory categories?
+      // 4. CHECK CATEGORY MATCH: Does this product match one of the 25 SecureTools directory categories?
       let resolvedCategory: string | null = null;
       const catInput = parsed.primaryCategory ? String(parsed.primaryCategory).trim().toLowerCase() : '';
       const isExplicitIncompatible = 
@@ -2058,7 +2061,7 @@ FINAL REMINDER: Return EXACTLY ONE \`\`\`json code block starting with \`\`\`jso
       if (isCategoryMismatch) {
         let mismatchMsg = '';
         if (detectedItemType === 'software') {
-          mismatchMsg = 'This software does not match any category in our directory. SecureTools.live exclusively features security, cloud storage, virtual data rooms, and document tools.';
+          mismatchMsg = 'This software does not match any category in our directory. SecureTools.live exclusively features security, cloud storage, database & backend security, virtual data rooms, and document tools.';
         } else if (detectedItemType === 'open-source') {
           mismatchMsg = 'This open-source repository does not match our directory categories. SecureTools.live exclusively features open-source security, encrypted storage, and document infrastructure projects.';
         } else if (detectedItemType === 'extension') {
@@ -3137,7 +3140,7 @@ FINAL REMINDER: Return EXACTLY ONE \`\`\`json code block starting with \`\`\`jso
                     target="_blank"
                     className="inline-flex items-center gap-1 text-[11.5px] font-semibold text-[#09090b] hover:underline"
                   >
-                    <span>Browse 24 Categories</span>
+                    <span>Browse 25 Categories</span>
                     <ArrowUpRight01Icon size={13} />
                   </Link>
                 ) : (

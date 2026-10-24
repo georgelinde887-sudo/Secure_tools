@@ -221,6 +221,16 @@ export const CATEGORIES: Category[] = [
     iconName: 'Eye',
     toolCount: 9,
   },
+  {
+    id: 'cat-database-backend-security',
+    slug: 'database-backend-security',
+    name: 'Database & Backend Security',
+    pillar: 'Security & Compliance',
+    description: 'Backend-as-a-service platforms, database encryption, access proxies, and secrets management securing application data and APIs.',
+    iconName: 'Database',
+    toolCount: 0,
+    featured: true,
+  },
 
   // 8. Document Intelligence
   {

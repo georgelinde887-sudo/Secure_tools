@@ -14,6 +14,7 @@ import {
   Key01Icon,
   FileZipIcon,
   Tag01Icon,
+  Database01Icon,
 } from 'hugeicons-react';
 import { SoftwareItem, getItemPath } from '@/types';
 import { resolveSoftwareLogo, getDisplayDomain, withUtm } from '@/lib/logo-utils';
@@ -40,6 +41,7 @@ export function SoftwareCard({ software }: SoftwareCardProps) {
     if (s.includes('share') || s.includes('transfer')) return Share01Icon;
     if (s.includes('pdf')) return Pdf01Icon;
     if (s.includes('sign')) return SignatureIcon;
+    if (s.includes('database') || s.includes('backend')) return Database01Icon;
     if (s.includes('security') || s.includes('encrypt')) return Shield01Icon;
     if (s.includes('data-room') || s.includes('vdr') || s.includes('key')) return Key01Icon;
     if (s.includes('large-file') || s.includes('fast-transfer')) return ArrowUpRight01Icon;

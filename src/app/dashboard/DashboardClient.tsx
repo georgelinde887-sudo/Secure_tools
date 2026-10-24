@@ -31,6 +31,7 @@ import {
   SignatureIcon,
   Key01Icon,
   FileZipIcon,
+  Database01Icon,
 } from 'hugeicons-react';
 import { ChevronDown } from 'lucide-react';
 import { HeroBanner } from '@/components/HeroBanner';
@@ -188,6 +189,7 @@ export function DashboardClient({
     if (s.includes('share') || s.includes('transfer')) return Share01Icon;
     if (s.includes('pdf')) return Pdf01Icon;
     if (s.includes('sign')) return SignatureIcon;
+    if (s.includes('database') || s.includes('backend')) return Database01Icon;
     if (s.includes('security') || s.includes('encrypt')) return Shield01Icon;
     if (s.includes('data-room') || s.includes('vdr') || s.includes('key')) return Key01Icon;
     if (s.includes('large-file') || s.includes('fast-transfer')) return ArrowUpRight01Icon;
@@ -1408,7 +1410,7 @@ export function DashboardClient({
                     <MarketingIcon size={20} />
                   </div>
                   <div>
-                    <h3 className="text-[15px] font-bold text-[#09090b]">Promote Your Product Across 24 Security Categories</h3>
+                    <h3 className="text-[15px] font-bold text-[#09090b]">Promote Your Product Across 25 Security Categories</h3>
                     <p className="text-[12.5px] text-[#71717a] mt-1 leading-relaxed max-w-2xl">
                       SecureTools.live connects your software with verified cybersecurity teams, IT buyers, and decision-makers looking for active solutions.
                     </p>

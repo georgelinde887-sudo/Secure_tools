@@ -217,7 +217,7 @@ export async function POST(request: NextRequest) {
 
       return NextResponse.json(
         {
-          error: `This ${typeLabel} does not match any category in our directory. SecureTools.live exclusively features secure file sharing, cloud storage, virtual data rooms, document systems, and cybersecurity tools. This ${typeLabel} is not applicable.`,
+          error: `This ${typeLabel} does not match any category in our directory. SecureTools.live exclusively features secure file sharing, cloud storage, database & backend security, virtual data rooms, document systems, and cybersecurity tools. This ${typeLabel} is not applicable.`,
           code: 'CATEGORY_NOT_SUPPORTED',
           category: primaryCategory
         },

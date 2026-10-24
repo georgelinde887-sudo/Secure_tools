@@ -140,7 +140,7 @@ const CATEGORIES_CARD_SETS: HeroBannerCard[][] = [
     },
     {
       title: "Collaboration & Security",
-      subtitle: "9 categories",
+      subtitle: "10 categories",
       href: "#pillar-security-compliance",
       icon: <Users className="w-4 h-4 text-[#09090b] shrink-0" strokeWidth={1.8} />,
     },
