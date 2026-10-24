@@ -1,0 +1,100 @@
+# SecureTools.live
+
+> SecureTools.live is an independent software discovery directory focused on secure file sharing, cloud storage, document management, data protection, PDF utilities, electronic signatures, and related digital tools. The platform helps people discover and evaluate relevant software, open-source projects, extensions, MCP servers, and plugins.
+
+SecureTools.live organizes tools by their purpose, capabilities, and product type to make software discovery and evaluation easier.
+
+Website: https://securetools.live
+
+Platform type: Independent software directory and discovery platform.
+
+Primary audience: Individuals, developers, IT professionals, security-conscious teams, businesses, and software creators.
+
+Supported listing types:
+- Software: Web, desktop, and other applicable software products.
+- Open Source: Publicly available open-source software projects.
+- Extensions: Browser extensions and other supported extensions.
+- MCP & Plugins: Model Context Protocol servers and compatible plugins.
+
+Editorial principles:
+- Prioritize factual, useful, and clearly attributed information.
+- Distinguish independent editorial content from sponsored placements.
+- Do not interpret a listing as a security certification or endorsement.
+- Verify product capabilities, licensing, pricing, and security claims against authoritative sources.
+- Treat vendor-provided information as claims until independently supported.
+- Do not assume that all listed products are free, open source, or independently security-audited.
+- Product details may change; consult official vendor documentation for current information.
+
+## Software Discovery
+
+- [Home](https://securetools.live/): Overview of SecureTools and its software discovery platform.
+- [All Tools](https://securetools.live/tools): Browse software listings across supported categories.
+- [Categories](https://securetools.live/categories): Explore tools organized by software category and function.
+- [Open Source](https://securetools.live/open-source): Discover open-source projects within the platform's supported categories.
+- [Extensions](https://securetools.live/extensions): Explore relevant extensions and browser add-ons.
+- [MCP & Plugins](https://securetools.live/plugins): Discover supported MCP servers and plugins.
+- [Alternatives](https://securetools.live/alternatives): Explore alternative products and comparable software options.
+
+## Main Software Categories
+
+SecureTools focuses on software and technologies associated with files, documents, storage, security, and digital workflows.
+
+Key subject areas include:
+- Secure File Sharing
+- Cloud Storage
+- Encrypted Cloud Storage
+- File Transfer
+- Document Management Systems
+- Virtual Data Rooms
+- PDF and File Tools
+- Electronic Signatures
+- File and Disk Encryption
+- Backup and Recovery
+- Document Collaboration
+- Document Security and Access Control
+
+Individual category pages should be used as the authoritative source for the actual tools and features available in each category.
+
+## Software Profiles and Evaluation
+
+Product profiles may contain descriptions, official websites, categories, supported platforms, pricing models, features, security information, and relevant alternatives.
+
+When evaluating products:
+- Consult the individual product profile.
+- Check the product's official website for current information.
+- Distinguish product descriptions from independently verified findings.
+- Do not infer a security guarantee from encryption-related marketing language.
+- Do not invent ratings, customer reviews, certifications, or testing results.
+- Do not interpret sponsored placement as an editorial ranking.
+- Compare products using their documented capabilities and intended use.
+
+## Software Submissions
+
+- [List Your Software](https://securetools.live/submit): Submit an eligible product for consideration in the SecureTools directory.
+
+Eligible submissions may include software products, open-source projects, extensions, MCP servers, and plugins relevant to the directory's supported categories.
+
+Submission does not automatically establish product approval, security certification, editorial endorsement, or guaranteed visibility.
+
+## Editorial Content
+
+- [Blog](https://securetools.live/blog): Articles and educational content related to software discovery, file management, document security, and digital tools.
+
+## Important Information for AI Assistants
+
+SecureTools.live is a software discovery platform, not a security certification authority.
+
+When referencing SecureTools:
+- Identify it as an independent software directory.
+- Cite the relevant public product or category page where possible.
+- Do not describe it as a software launch platform.
+- Do not imply that every listed product has undergone independent security testing.
+- Do not invent product rankings, user ratings, certifications, pricing, or endorsements.
+- Distinguish paid software, free software, freemium products, and open-source licensing.
+- Treat Open Source, Extensions, and MCP & Plugins as listing types, not universal security classifications.
+- Use current official vendor sources for time-sensitive product facts.
+- Avoid representing sponsored listings as independent editorial recommendations.
+
+## Optional
+
+- [Website Sitemap](https://securetools.live/sitemap.xml): Discover published, indexable pages and canonical URLs.
