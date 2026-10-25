@@ -20,24 +20,31 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
+  themeColor: '#02ccc1',
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://securetools.live'),
+  applicationName: 'SecureTools.live',
   title: {
     default: 'SecureTools.live | Software Discovery for Files, Documents & Security',
     template: '%s | SecureTools.live'
   },
-  description: 'Independent software discovery, comparison, and research platform covering the digital file and document ecosystem: secure file sharing, cloud storage, virtual data rooms, and digital signatures.',
+  description: 'Independent software discovery, comparison, and research platform covering 25 security categories: secure file sharing, encrypted cloud storage, database & backend security, virtual data rooms, and digital signatures.',
   keywords: [
     'secure file sharing',
     'encrypted cloud storage',
+    'database and backend security',
+    'backend as a service security',
+    'database encryption',
     'virtual data rooms',
     'zero-knowledge encryption',
     'electronic signatures',
-    'document management',
-    'PDF redaction',
-    'file security software'
+    'document management systems',
+    'PDF security and redaction',
+    'file security software',
+    'cybersecurity software directory',
+    'SecureTools'
   ],
   authors: [{ name: 'SecureTools.live Editorial Team', url: 'https://securetools.live/about' }],
   creator: 'SecureTools.live',
@@ -53,21 +60,42 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/icon.png', type: 'image/png', sizes: '192x192' },
+    ],
+    shortcut: ['/favicon.ico'],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://securetools.live',
     siteName: 'SecureTools.live',
     title: 'SecureTools.live | Software Discovery for Files, Documents & Security',
-    description: 'Discover the right tools for files, documents, and digital security. Verified capabilities, zero-knowledge evaluations, and enterprise comparisons.',
+    description: 'Discover the right tools for files, documents, database security, and digital privacy. 25 verified categories, zero-knowledge evaluations, and enterprise comparisons.',
+    images: [
+      {
+        url: 'https://securetools.live/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'SecureTools.live - Software Discovery for Files, Documents & Security',
+        type: 'image/png',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'SecureTools.live | Software Discovery for Files, Documents & Security',
-    description: 'Independent software discovery and comparison platform covering the entire digital file ecosystem.',
-  },
-  icons: {
-    icon: '/favicon.ico',
+    description: 'Independent software discovery and comparison platform covering the entire digital file, document, and database security ecosystem.',
+    images: ['https://securetools.live/og-image.png'],
+    creator: '@securetools_live',
   },
   alternates: {
     canonical: 'https://securetools.live',

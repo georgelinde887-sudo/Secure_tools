@@ -7,10 +7,16 @@ import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'SecureTools.live | Software Discovery for Files, Documents & Security',
-  description: 'Independent software discovery, evaluation, and research platform covering the digital file and document ecosystem: secure file sharing, cloud storage, virtual data rooms, and digital signatures.',
+  description: 'Independent software discovery, evaluation, and research platform covering 25 security categories: secure file sharing, encrypted cloud storage, database & backend security, virtual data rooms, and digital signatures.',
   alternates: {
     canonical: 'https://securetools.live',
-  }
+  },
+  openGraph: {
+    title: 'SecureTools.live | Software Discovery for Files, Documents & Security',
+    description: 'Independent software discovery, evaluation, and research platform covering 25 security categories: secure file sharing, encrypted cloud storage, database & backend security, virtual data rooms, and digital signatures.',
+    url: 'https://securetools.live',
+    images: [{ url: 'https://securetools.live/og-image.png', width: 1200, height: 630 }],
+  },
 };
 
 interface HomePageProps {

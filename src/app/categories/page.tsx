@@ -34,7 +34,13 @@ export const metadata: Metadata = {
   description: 'Explore the complete category taxonomy covering file sharing, encrypted cloud storage, virtual data rooms, electronic signatures, database security, and PDF protection.',
   alternates: {
     canonical: 'https://securetools.live/categories',
-  }
+  },
+  openGraph: {
+    title: 'Software Categories Taxonomy | SecureTools.live',
+    description: 'Explore the complete category taxonomy covering file sharing, encrypted cloud storage, virtual data rooms, electronic signatures, database security, and PDF protection.',
+    url: 'https://securetools.live/categories',
+    images: [{ url: 'https://securetools.live/og-image.png', width: 1200, height: 630 }],
+  },
 };
 
 function getCategoryIcon(slug: string) {
