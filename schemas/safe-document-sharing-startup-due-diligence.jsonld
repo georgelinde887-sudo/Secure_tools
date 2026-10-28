@@ -1,0 +1,130 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SecureTools.live",
+      "url": "https://securetools.live",
+      "logo": "https://securetools.live/securetools-hero-logo.png",
+      "description": "Independent software discovery, comparison, and research platform covering the digital file and document ecosystem.",
+      "sameAs": []
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SecureTools.live",
+      "url": "https://securetools.live",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://securetools.live/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://securetools.live/blog/safe-document-sharing-startup-due-diligence#article",
+          "headline": "Safe Document Sharing for Startup Due Diligence: A Practical Workflow",
+          "description": "Manage versioning, investor access, disclosures and follow-ups without sending unnecessary sensitive data during startup due diligence.",
+          "datePublished": "2026-10-27",
+          "dateModified": "2026-10-27",
+          "mainEntityOfPage": {
+            "@id": "https://securetools.live/blog/safe-document-sharing-startup-due-diligence"
+          },
+          "image": "https://securetools.live/blog-images/safe-document-sharing-startup-due-diligence-cover.png",
+          "author": {
+            "@type": "Person",
+            "name": "Mohamed Siraj",
+            "url": "https://www.linkedin.com/in/mohamed-siraj-1a1910234/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "SecureTools",
+            "url": "https://securetools.live"
+          },
+          "inLanguage": "en",
+          "isAccessibleForFree": true
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://securetools.live/blog/safe-document-sharing-startup-due-diligence#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://securetools.live"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://securetools.live/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Fundraising & Diligence",
+              "item": "https://securetools.live/categories/virtual-data-rooms"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Safe Document Sharing for Startup Due Diligence",
+              "item": "https://securetools.live/blog/safe-document-sharing-startup-due-diligence"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://securetools.live/blog/safe-document-sharing-startup-due-diligence#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What documents should startups withhold until late-stage diligence?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Withhold itemized employee compensation, detailed cap table option grants, individual customer contracts with identifiable pricing, and raw proprietary source code algorithms until a signed term sheet is executed."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can a data room prevent investors from forwarding pitch materials?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, if you configure email authentication or one-time passcodes (OTP). When a link is forwarded, the unauthorized recipient cannot view contents without verifying their approved email address."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How should founders handle customer data privacy under GDPR during diligence?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Anonymize or pseudonymize customer references before uploading contracts. Replace enterprise names with sector descriptors (e.g. \"Tier 1 Logistics Provider\") unless the investor signs a formal NDA and regulatory review permits disclosure."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the biggest risk when updating financial models mid-round?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The biggest risk is circulating conflicting versions. Multiple partners at the same venture fund may evaluate different model assumptions. Always publish version numbers, changelogs, and retire obsolete links."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What should happen to the data room once fundraising closes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Deactivate external viewing links for firms that passed, export an immutable audit log of all access sessions, and archive a frozen copy of all executed deal documents for corporate records."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

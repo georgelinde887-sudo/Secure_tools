@@ -192,7 +192,7 @@ export function AlternativeDetailClient({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={`Search ${brandName} alternatives...`}
-              className="w-full h-[38px] pl-10 pr-9 rounded-xl border border-[#e4e4e7] bg-white text-[13px] text-[#09090b] placeholder-[#a1a1aa] focus:outline-none focus:border-[#02ccc1] focus:ring-1 focus:ring-[#02ccc1] shadow-2xs transition-all font-geist"
+              className="w-full h-[38px] pl-10 pr-9 rounded-xl border border-[#e4e4e7] bg-white text-[13px] text-[#09090b] placeholder-[#a1a1aa] focus:outline-none focus:border-[#1c63ed] focus:ring-1 focus:ring-[#1c63ed] shadow-2xs transition-all font-geist"
             />
             {searchQuery && (
               <button
@@ -252,7 +252,7 @@ export function AlternativeDetailClient({
           {alt.whyUsersSeekAlternatives && alt.whyUsersSeekAlternatives.length > 0 && (
             <section className="bg-white rounded-2xl border border-[#e4e4e7] p-6 shadow-2xs">
               <h2 className="text-[16px] font-bold text-[#09090b] mb-2 flex items-center gap-2">
-                <AlertCircleIcon size={18} className="text-[#02ccc1]" />
+                <AlertCircleIcon size={18} className="text-[#1c63ed]" />
                 Why Users Seek {brandName} Alternatives
               </h2>
               <p className="text-[13px] text-[#71717a] mb-4">
@@ -261,7 +261,7 @@ export function AlternativeDetailClient({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {alt.whyUsersSeekAlternatives.map((reason, idx) => (
                   <div key={idx} className="p-3.5 bg-[#fafafa] rounded-xl border border-[#e4e4e7] text-[13px] text-[#09090b] flex items-start gap-2.5">
-                    <span className="text-[#02ccc1] font-bold mt-0.5">•</span>
+                    <span className="text-[#1c63ed] font-bold mt-0.5">•</span>
                     <span className="leading-relaxed">{reason}</span>
                   </div>
                 ))}

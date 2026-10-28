@@ -295,7 +295,7 @@ export function OpenSourceClient({ initialSoftware, categories }: OpenSourceClie
                   }}
                   className={`w-full text-left px-3.5 py-2 text-[13px] transition-all flex items-center justify-between cursor-pointer rounded-xl ${
                     !selectedCategory
-                      ? 'bg-[#02ccc1] text-white font-semibold shadow-xs'
+                      ? 'bg-[#1c63ed] text-white font-semibold shadow-xs'
                       : 'text-[#09090b] hover:bg-black/5 font-medium'
                   }`}
                 >
@@ -324,7 +324,7 @@ export function OpenSourceClient({ initialSoftware, categories }: OpenSourceClie
                       }}
                       className={`w-full text-left px-3.5 py-2 text-[13px] transition-all flex items-center justify-between cursor-pointer rounded-xl ${
                         isSelected
-                          ? 'bg-[#02ccc1] text-white font-semibold shadow-xs'
+                          ? 'bg-[#1c63ed] text-white font-semibold shadow-xs'
                           : 'text-[#09090b] hover:bg-black/5 font-medium'
                       }`}
                     >
@@ -393,13 +393,13 @@ export function OpenSourceClient({ initialSoftware, categories }: OpenSourceClie
             return (
               <div
                 key={software.id}
-                className="group rounded-2xl border border-[#e4e4e7] bg-white hover:border-[#02ccc1] transition-all p-5 sm:p-6 shadow-2xs flex flex-col justify-between"
+                className="group rounded-2xl border border-[#e4e4e7] bg-white hover:border-[#1c63ed] transition-all p-5 sm:p-6 shadow-2xs flex flex-col justify-between"
               >
                 <div>
                   {/* Card Header: Logo + Title + Verified Domain + Top-right External Link */}
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex items-center gap-3.5 min-w-0 flex-1">
-                      <div className="w-14 h-14 rounded-2xl border border-[#e4e4e7] bg-white flex items-center justify-center shrink-0 p-2.5 shadow-2xs group-hover:border-[#02ccc1]/30 transition-colors relative overflow-hidden">
+                      <div className="w-14 h-14 rounded-2xl border border-[#e4e4e7] bg-white flex items-center justify-center shrink-0 p-2.5 shadow-2xs group-hover:border-[#1c63ed]/30 transition-colors relative overflow-hidden">
                         {resolvedLogo ? (
                           <img
                             src={resolvedLogo}
@@ -478,7 +478,7 @@ export function OpenSourceClient({ initialSoftware, categories }: OpenSourceClie
                       pricingLabel === 'Free'
                         ? 'bg-[#ecfdf5] text-[#065f46] border-[#a7f3d0]/80'
                         : pricingLabel === 'Freemium'
-                        ? 'bg-[#02ccc1]/10 text-[#008f87] border-[#02ccc1]/30'
+                        ? 'bg-[#1c63ed]/10 text-[#1c63ed] border-[#1c63ed]/30'
                         : 'bg-[#f4f4f5] text-[#18181b] border-[#e4e4e7]'
                     }`}
                   >
@@ -489,7 +489,7 @@ export function OpenSourceClient({ initialSoftware, categories }: OpenSourceClie
                         pricingLabel === 'Free'
                           ? 'text-[#059669]'
                           : pricingLabel === 'Freemium'
-                          ? 'text-[#02ccc1]'
+                          ? 'text-[#1c63ed]'
                           : 'text-[#52525b]'
                       }`}
                     />

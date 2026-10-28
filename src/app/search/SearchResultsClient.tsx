@@ -71,7 +71,7 @@ export function SearchResultsClient() {
           <p className="text-[12px] text-[#71717a] mb-4">
             Try searching for broad terms like &ldquo;File Sharing&rdquo;, &ldquo;Cloud Storage&rdquo;, or &ldquo;Zero-Knowledge&rdquo;.
           </p>
-          <Link href="/" className="font-mono text-[11px] text-[#02ccc1] underline">
+          <Link href="/" className="font-mono text-[11px] text-[#1c63ed] underline">
             Browse full software directory &rarr;
           </Link>
         </div>

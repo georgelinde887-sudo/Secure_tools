@@ -190,6 +190,7 @@ function LeftSidebarInternal({
     <>
       {/* Desktop Sticky Rail (228px expanded, 56px collapsed) */}
       <aside
+        suppressHydrationWarning
         className={`hidden lg:block shrink-0 border-r border-[#e4e4e7] bg-[#fafafa] transition-all duration-200 select-none ml-5 left-sidebar-rail ${
           isCollapsed ? 'w-[56px]' : 'w-[228px]'
         }`}

@@ -74,7 +74,7 @@ export function getStatusEmailHtml({
   return `
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 580px; margin: 0 auto; padding: 24px; color: #18181b; background-color: #ffffff; border: 1px solid #e4e4e7; rounded: 12px;">
       <div style="margin-bottom: 20px;">
-        <span style="font-weight: 700; font-size: 16px; letter-spacing: -0.5px; color: #09090b;">SecureTools<span style="color: #02ccc1;">.live</span></span>
+        <span style="font-weight: 700; font-size: 16px; letter-spacing: -0.5px; color: #09090b;">SecureTools<span style="color: #1c63ed;">.live</span></span>
       </div>
       <h1 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #09090b; letter-spacing: -0.3px;">${heading}</h1>
       <p style="font-size: 14px; line-height: 1.6; color: #52525b; margin-bottom: 20px;">

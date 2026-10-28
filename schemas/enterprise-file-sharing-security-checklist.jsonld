@@ -1,0 +1,134 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SecureTools.live",
+      "url": "https://securetools.live",
+      "logo": "https://securetools.live/securetools-hero-logo.png",
+      "description": "Independent software discovery, comparison, and research platform covering the digital file and document ecosystem.",
+      "sameAs": []
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SecureTools.live",
+      "url": "https://securetools.live",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://securetools.live/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://securetools.live/blog/enterprise-file-sharing-security-checklist#article",
+          "headline": "The Enterprise File Sharing Security Checklist: 12 Non-Negotiables",
+          "description": "Audit enterprise file sharing with 12 testable controls for access, encryption, audit logs, DLP, retention and incident response. Includes pass/fail checks.",
+          "mainEntityOfPage": {
+            "@id": "https://securetools.live/blog/enterprise-file-sharing-security-checklist"
+          },
+          "image": [
+            "https://securetools.live/blog-images/enterprise-file-sharing-security-checklist-hero.webp"
+          ],
+          "datePublished": "2026-10-26",
+          "dateModified": "2026-10-26",
+          "author": {
+            "@type": "Person",
+            "name": "Mohamed Siraj",
+            "url": "https://www.linkedin.com/in/mohamed-siraj-1a1910234/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "SecureTools",
+            "url": "https://securetools.live"
+          },
+          "inLanguage": "en",
+          "isAccessibleForFree": true
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://securetools.live/blog/enterprise-file-sharing-security-checklist#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://securetools.live"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://securetools.live/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Enterprise File Sharing Security Checklist",
+              "item": "https://securetools.live/blog/enterprise-file-sharing-security-checklist"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://securetools.live/blog/enterprise-file-sharing-security-checklist#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is an encrypted file-sharing link safe by itself?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Encryption protects data in transit or storage, but a forwarded link can still grant access if there is no recipient identity check, scope restriction, or expiration."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does disabling downloads prevent screenshots?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Browser restrictions may discourage routine downloading, but a recipient can still capture the visible content using screenshots, screen recording, or an external camera."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between MFA and email verification?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "MFA combines independent authentication factors to reduce account compromise risk. A one-time email code usually confirms access to an inbox; it is not equivalent to phishing-resistant MFA."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can a revoked link erase a file already downloaded?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Revocation can block subsequent access through the controlled link; it does not remove copies that a recipient already downloaded, printed, or photographed."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long should file-sharing logs be retained?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "There is no universal retention period. Define a period based on contractual commitments, applicable regulations, investigation needs, privacy obligations, and storage cost; test that logs remain available during that period."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does SOC 2 certification guarantee secure file sharing?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. A SOC 2 report provides an independent attestation about defined controls, scope, and a reporting period. Buyers should inspect the report scope, exceptions, complementary user controls, and coverage of the particular sharing service."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

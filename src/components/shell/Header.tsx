@@ -15,7 +15,7 @@ export function Header({
   onToggleMobileSidebar,
 }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-40 h-[57px] w-full bg-white border-b border-[#e4e4e7] flex items-center justify-between pl-5 pr-[10px]">
+    <header className="sticky top-0 z-40 h-[57px] w-full bg-white border-b border-[#e4e4e7] flex items-center justify-between pl-5 pr-[10px]" suppressHydrationWarning>
       {/* Left: Brand & Sidebar Toggles */}
       <div className="flex items-center gap-3">
         {/* Mobile menu trigger */}
@@ -49,10 +49,10 @@ export function Header({
           <span>Dashboard</span>
         </Link>
 
-        {/* Clean Mint Button (Enterprise Primary Color) */}
+        {/* Primary Action Button (Reference Royal Blue #1c63ed) */}
         <Link
           href="/submit"
-          className="inline-flex items-center justify-center h-[36px] px-4 rounded-[10px] bg-[#02ccc1] hover:bg-[#00baa9] text-white font-semibold text-[13.5px] tracking-tight shadow-xs transition-colors cursor-pointer active:translate-y-0"
+          className="inline-flex items-center justify-center h-[36px] px-4 rounded-[14px] bg-[#1c63ed] hover:bg-[#1554cc] text-white font-medium text-[13.5px] tracking-tight shadow-xs transition-colors cursor-pointer active:translate-y-0"
         >
           <span>List Your Software</span>
         </Link>

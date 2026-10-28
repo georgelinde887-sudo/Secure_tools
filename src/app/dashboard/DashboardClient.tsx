@@ -938,7 +938,7 @@ export function DashboardClient({
                                     {listing.submission_status === 'published' ? (
                                       <Link
                                         href={`/tools/${listing.slug}`}
-                                        className="text-[13.5px] font-bold text-[#09090b] hover:text-[#02ccc1] transition-colors truncate"
+                                        className="text-[13.5px] font-bold text-[#09090b] hover:text-[#1c63ed] transition-colors truncate"
                                       >
                                         {listing.name}
                                       </Link>
@@ -1066,7 +1066,7 @@ export function DashboardClient({
                                             href={listing.official_website_url}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-[11.5px] font-medium text-[#09090b] hover:text-[#02ccc1] hover:underline mt-0.5 inline-flex items-center gap-1 truncate max-w-full"
+                                            className="text-[11.5px] font-medium text-[#09090b] hover:text-[#1c63ed] hover:underline mt-0.5 inline-flex items-center gap-1 truncate max-w-full"
                                           >
                                             <span className="truncate">{getDomain(listing.official_website_url) || 'Visit Site'}</span>
                                             <ArrowUpRight01Icon size={11} />
@@ -1096,14 +1096,14 @@ export function DashboardClient({
                 {/* Table footer */}
                 <div className="px-6 py-3.5 border-t border-[#f4f4f5] bg-[#fafafa] flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#02ccc1]"></span>
+                    <span className="w-2 h-2 rounded-full bg-[#1c63ed]"></span>
                     <span className="text-[12px] font-medium text-[#52525b]">
                       {listings.length} Active {listings.length === 1 ? 'Listing' : 'Listings'} · Free Plan
                     </span>
                   </div>
                   <Link
                     href="/submit"
-                    className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#09090b] hover:text-[#02ccc1] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-[#09090b] hover:text-[#1c63ed] transition-colors"
                   >
                     <PlusSignIcon size={13} strokeWidth={2.5} />
                     <span>Submit Another Tool</span>

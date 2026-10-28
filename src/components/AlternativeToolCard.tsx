@@ -190,16 +190,16 @@ export function AlternativeToolCard({ software }: AlternativeToolCardProps) {
 
             {/* Zero-Knowledge Security Badge */}
             {isZeroKnowledge && (
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-[#02ccc1]/10 text-[#008f87] border border-[#02ccc1]/30">
-                <Shield01Icon size={12} className="text-[#008f87]" />
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-[#1c63ed]/10 text-[#1c63ed] border border-[#1c63ed]/30">
+                <Shield01Icon size={12} className="text-[#1c63ed]" />
                 <span>Zero-Knowledge</span>
               </span>
             )}
 
             {/* End-to-End Encrypted */}
             {isE2EE && !isZeroKnowledge && (
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-[#02ccc1]/10 text-[#008f87] border border-[#02ccc1]/30">
-                <Shield01Icon size={12} className="text-[#008f87]" />
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-[#1c63ed]/10 text-[#1c63ed] border border-[#1c63ed]/30">
+                <Shield01Icon size={12} className="text-[#1c63ed]" />
                 <span>E2EE</span>
               </span>
             )}
@@ -210,7 +210,7 @@ export function AlternativeToolCard({ software }: AlternativeToolCardProps) {
         <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-start gap-2 pt-2 sm:pt-0 border-t sm:border-t-0 border-[#f4f4f5] sm:shrink-0">
           <Link
             href={`/tools/${software.slug}`}
-            className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-lg text-[12px] font-semibold text-[#09090b] bg-[#f4f4f5] hover:bg-[#02ccc1] hover:text-white transition-colors"
+            className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-lg text-[12px] font-semibold text-[#09090b] bg-[#f4f4f5] hover:bg-[#1c63ed] hover:text-white transition-colors"
           >
             View Details
           </Link>

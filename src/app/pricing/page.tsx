@@ -6,7 +6,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Listing Plans & Pricing | SecureTools.live',
-  description: 'List and promote your software on SecureTools. Choose between free community submission and $19 instant publication.',
+  description: 'List and promote your software on SecureTools. Free community submissions available now, instant listing coming soon.',
   alternates: {
     canonical: 'https://securetools.live/pricing',
   },
@@ -23,7 +23,8 @@ export default function PricingPage() {
       period: 'forever',
       buttonText: 'Submit Free Tool',
       buttonHref: '/submit',
-      buttonClass: 'bg-white hover:bg-[#f4f4f5] text-[#09090b] border border-[#e4e4e7]',
+      buttonClass: 'bg-[#09090b] hover:bg-black/85 text-white',
+      disabled: false,
       features: [
         { text: '1 active product submission per account', included: true },
         { text: 'Standard review queue (2–4 weeks)', included: true },
@@ -36,13 +37,14 @@ export default function PricingPage() {
     {
       id: 'instant',
       name: 'Instant Listing',
-      badge: 'RECOMMENDED',
+      badge: 'COMING SOON',
       description: 'Skip the queue — get reviewed, verified, and published within 48 hours.',
       price: '$19',
       period: 'one-time',
-      buttonText: 'Get Instant Listing',
-      buttonHref: '/submit?plan=instant',
-      buttonClass: 'bg-[#09090b] hover:bg-black/85 text-white',
+      buttonText: 'Coming Soon',
+      buttonHref: '#',
+      buttonClass: 'bg-[#f4f4f5] text-[#71717a] border border-[#e4e4e7] cursor-not-allowed',
+      disabled: true,
       features: [
         { text: 'Instant publication after validation (24–48h)', included: true },
         { text: 'Priority editorial review queue', included: true },
@@ -108,12 +110,21 @@ export default function PricingPage() {
               </div>
 
               {/* Action Button - 100% Horizontal Straight Alignment across both cards */}
-              <Link
-                href={plan.buttonHref}
-                className={`w-full h-10 rounded-xl text-[13px] font-medium flex items-center justify-center transition-all shadow-2xs mb-6 cursor-pointer ${plan.buttonClass}`}
-              >
-                <span>{plan.buttonText}</span>
-              </Link>
+              {plan.disabled ? (
+                <div
+                  className={`w-full h-10 rounded-xl text-[13px] font-medium flex items-center justify-center shadow-2xs mb-6 select-none ${plan.buttonClass}`}
+                  aria-disabled="true"
+                >
+                  <span>{plan.buttonText}</span>
+                </div>
+              ) : (
+                <Link
+                  href={plan.buttonHref}
+                  className={`w-full h-10 rounded-xl text-[13px] font-medium flex items-center justify-center transition-all shadow-2xs mb-6 cursor-pointer ${plan.buttonClass}`}
+                >
+                  <span>{plan.buttonText}</span>
+                </Link>
+              )}
 
               {/* Features List */}
               <div className="space-y-2.5 pt-3 border-t border-[#f4f4f5]">

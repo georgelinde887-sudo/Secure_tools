@@ -171,7 +171,7 @@ export function BlogClient({ articles }: BlogClientProps) {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search articles or topics..."
-            className="w-full h-[38px] pl-10 pr-9 rounded-xl border border-[#e4e4e7] bg-white text-[13px] text-[#09090b] placeholder-[#71717a] shadow-2xs focus:outline-none focus:border-[#02ccc1] focus:ring-1 focus:ring-[#02ccc1] transition-all font-geist"
+            className="w-full h-[38px] pl-10 pr-9 rounded-xl border border-[#e4e4e7] bg-white text-[13px] text-[#09090b] placeholder-[#71717a] shadow-2xs focus:outline-none focus:border-[#1c63ed] focus:ring-1 focus:ring-[#1c63ed] transition-all font-geist"
           />
           {searchQuery && (
             <button
@@ -190,7 +190,7 @@ export function BlogClient({ articles }: BlogClientProps) {
           <button
             type="button"
             onClick={() => setIsLangDropdownOpen((prev) => !prev)}
-            className="h-[38px] px-3 rounded-xl border border-[#e4e4e7] bg-white hover:border-[#02ccc1] text-[13px] font-medium text-[#09090b] shadow-2xs flex items-center gap-2 transition-colors cursor-pointer"
+            className="h-[38px] px-3 rounded-xl border border-[#e4e4e7] bg-white hover:border-[#1c63ed] text-[13px] font-medium text-[#09090b] shadow-2xs flex items-center gap-2 transition-colors cursor-pointer"
             aria-haspopup="listbox"
             aria-expanded={isLangDropdownOpen}
           >
@@ -232,7 +232,7 @@ export function BlogClient({ articles }: BlogClientProps) {
                         <span>{lang.name}</span>
                       </div>
                       {isSelected && (
-                        <CheckmarkCircle02Icon size={14} className="text-[#02ccc1]" />
+                        <CheckmarkCircle02Icon size={14} className="text-[#1c63ed]" />
                       )}
                     </button>
                   );
@@ -275,8 +275,8 @@ export function BlogClient({ articles }: BlogClientProps) {
           {filteredArticles.map((art) => (
             <Link
               key={art.id}
-              href={`/guides/${art.slug}`}
-              className="group rounded-2xl border border-[#e4e4e7] bg-white overflow-hidden hover:border-[#02ccc1] hover:shadow-xs transition-all flex flex-col justify-between"
+              href={`/blog/${art.slug}`}
+              className="group rounded-2xl border border-[#e4e4e7] bg-white overflow-hidden hover:border-[#09090b] hover:shadow-xs transition-all flex flex-col justify-between"
             >
               <div>
                 {/* Cover Image Container */}
@@ -289,7 +289,7 @@ export function BlogClient({ articles }: BlogClientProps) {
                       loading="lazy"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#0c2340] to-[#02ccc1] text-white/80 font-mono text-xs">
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#0c2340] to-[#1c63ed] text-white/80 font-mono text-xs">
                       SecureTools Guide
                     </div>
                   )}
@@ -321,7 +321,7 @@ export function BlogClient({ articles }: BlogClientProps) {
                     {art.category}
                   </span>
                 )}
-                <span className="text-[12px] font-semibold text-[#02ccc1] opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+                <span className="text-[12px] font-semibold text-[#1c63ed] opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
                   Read <ArrowRight01Icon size={12} />
                 </span>
               </div>

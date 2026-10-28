@@ -43,7 +43,7 @@ export function AppShell({ children }: AppShellProps) {
   }
 
   return (
-    <div className="flex min-h-screen w-full flex-col bg-[#fafafa]">
+    <div className="flex min-h-screen w-full flex-col bg-[#fafafa]" suppressHydrationWarning>
       {/* 57px Minimal Header */}
       <Header
         onToggleDesktopSidebar={() => setIsSidebarCollapsed((prev) => !prev)}

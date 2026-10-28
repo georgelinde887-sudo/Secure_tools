@@ -59,7 +59,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
       <div className="blueprint-card p-6 mb-8 border border-[#e4e4e7] rounded-xl bg-white shadow-xs">
         <div className="flex items-start gap-4">
           <div className="w-11 h-11 rounded-lg bg-[#f4f4f5] text-[#09090b] flex items-center justify-center shrink-0 border border-[#e4e4e7]">
-            <Folder01Icon size={22} className="text-[#02ccc1]" />
+            <Folder01Icon size={22} className="text-[#1c63ed]" />
           </div>
           <div>
             <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#71717a] mb-1">
@@ -107,7 +107,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
             </div>
             <p className="font-semibold text-[#09090b] mb-1">No verified tools currently listed</p>
             <p className="text-[12px] text-[#71717a] mb-4">Our editorial research team is currently auditing products in this category.</p>
-            <Link href="/submit" className="font-mono text-[11px] text-[#02ccc1] underline">
+            <Link href="/submit" className="font-mono text-[11px] text-[#1c63ed] underline">
               Submit a tool for editorial evaluation &rarr;
             </Link>
           </div>
@@ -124,7 +124,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
       {siblingCategories.length > 0 && (
         <div className="pt-6 border-t border-[#e4e4e7]">
           <div className="flex items-center gap-2 mb-4">
-            <Folder01Icon size={16} className="text-[#02ccc1]" />
+            <Folder01Icon size={16} className="text-[#1c63ed]" />
             <h3 className="font-mono text-[11px] uppercase tracking-wider text-[#09090b] font-semibold">
               Related in {category.pillar}
             </h3>

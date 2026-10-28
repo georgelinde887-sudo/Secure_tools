@@ -207,6 +207,7 @@ export interface Article {
     name: string;
     role: string;
     avatarUrl?: string;
+    linkedinUrl?: string;
   };
   publishedAt: string;
   updatedAt: string;

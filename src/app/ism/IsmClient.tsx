@@ -896,8 +896,8 @@ export function IsmClient({
                   <svg className="w-full h-full overflow-hidden" viewBox="0 0 600 180" preserveAspectRatio="none">
                     <defs>
                       <linearGradient id="ismChartGradient" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#02ccc1" stopOpacity="0.22" />
-                        <stop offset="100%" stopColor="#02ccc1" stopOpacity="0.0" />
+                        <stop offset="0%" stopColor="#1c63ed" stopOpacity="0.22" />
+                        <stop offset="100%" stopColor="#1c63ed" stopOpacity="0.0" />
                       </linearGradient>
                     </defs>
 
@@ -925,7 +925,7 @@ export function IsmClient({
                     <circle cx="140" cy="100" r="4" fill="#09090b" stroke="#ffffff" strokeWidth="2" />
                     <circle cx="290" cy="70" r="4" fill="#09090b" stroke="#ffffff" strokeWidth="2" />
                     <circle cx="450" cy="115" r="4" fill="#09090b" stroke="#ffffff" strokeWidth="2" />
-                    <circle cx="600" cy="40" r="5" fill="#02ccc1" stroke="#ffffff" strokeWidth="2" />
+                    <circle cx="600" cy="40" r="5" fill="#1c63ed" stroke="#ffffff" strokeWidth="2" />
                   </svg>
                 </div>
                 <div className="flex items-center justify-between text-[11px] text-[#71717a] font-mono mt-2 pt-2 border-t border-[#f4f4f5]">
@@ -971,7 +971,7 @@ export function IsmClient({
                         cy="50"
                         r="38"
                         fill="transparent"
-                        stroke="#02ccc1"
+                        stroke="#1c63ed"
                         strokeWidth="12"
                         strokeDasharray="60 238"
                         strokeDashoffset="-143"
@@ -1012,7 +1012,7 @@ export function IsmClient({
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <span className="w-2.5 h-2.5 rounded-full bg-[#02ccc1]" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#1c63ed]" />
                       <span className="text-[#52525b]">Browser Extensions</span>
                     </div>
                     <span className="font-semibold text-[#09090b]">

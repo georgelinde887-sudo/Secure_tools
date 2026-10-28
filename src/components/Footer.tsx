@@ -80,7 +80,7 @@ export function Footer() {
             <ul className="space-y-2 text-[12.5px]">
               <li>
                 <Link href="/categories/secure-file-sharing" className="inline-flex items-center gap-1.5 font-medium text-[#09090b] hover:underline transition-colors">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#02ccc1] shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#1c63ed] shrink-0" />
                   <span>Secure File Sharing</span>
                 </Link>
               </li>
@@ -210,7 +210,7 @@ export function Footer() {
         <div className="border-t border-[#e4e4e7] pt-5 pb-5 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-[13px]">
             <svg
-              className="w-4 h-4 text-[#02ccc1] shrink-0"
+              className="w-4 h-4 text-[#1c63ed] shrink-0"
               viewBox="0 0 24 24"
               fill="currentColor"
               aria-hidden="true"

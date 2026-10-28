@@ -1,0 +1,93 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://securetools.live/blog/anonymize-customer-data-before-sharing#article",
+      "headline": "How to Anonymize Customer Data Before Sharing It",
+      "description": "Sharing a dataset safely requires reducing re-identification risk, not merely removing names from a spreadsheet. Treat anonymity as a risk assessment tied to data context, not a single redaction action.",
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "mainEntityOfPage": {
+        "@id": "https://securetools.live/blog/anonymize-customer-data-before-sharing"
+      },
+      "image": "/blog-images/anonymize-customer-data-before-sharing-cover.jpg",
+      "citation": [
+        "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-sharing/anonymisation/",
+        "https://www.nist.gov/privacy-framework"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Mohamed Siraj",
+        "url": "https://www.linkedin.com/in/mohamed-siraj-1a1910234/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SecureTools.live",
+        "url": "https://securetools.live"
+      },
+      "inLanguage": "en",
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://securetools.live/blog/anonymize-customer-data-before-sharing#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://securetools.live"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://securetools.live/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Document Workflow & Automation",
+          "item": "https://securetools.live/categories/document-workflow-automation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How to Anonymize Customer Data Before Sharing It",
+          "item": "https://securetools.live/blog/anonymize-customer-data-before-sharing"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://securetools.live/blog/anonymize-customer-data-before-sharing#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the fastest safe first step?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Treat anonymity as a risk assessment tied to data context, not a single redaction action. Write down the minimum required disclosure before selecting any product setting. Test that narrow path on a harmless file and ensure a teammate can explain the result."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which problem does a restriction not solve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It does not by itself solve linking quasi-identifiers to individuals using outside knowledge. Rules applied to a file or link cannot undo all information a legitimate recipient has already seen. Equally, a feature name does not establish the architecture, operating-system behavior, or legal enforceability of a given implementation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When do the checks need repeating?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reassess when a small segment contains a unique purchase and location combination, the intended recipient set changes, or the document has materially new contents. A review of the latest version is better evidence than relying indefinitely on the approval of the first file."
+          }
+        }
+      ]
+    }
+  ]
+}

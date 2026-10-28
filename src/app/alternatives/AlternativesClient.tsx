@@ -135,7 +135,7 @@ export function AlternativesClient({ initialItems }: AlternativesClientProps) {
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Search alternatives (e.g. Dropbox, Bitwarden, DocSend)..."
-          className="w-full h-[40px] pl-10 pr-9 rounded-xl border border-[#e4e4e7] bg-white text-[13.5px] text-[#09090b] placeholder-[#a1a1aa] focus:outline-none focus:border-[#02ccc1] focus:ring-1 focus:ring-[#02ccc1] shadow-2xs transition-all font-geist"
+          className="w-full h-[40px] pl-10 pr-9 rounded-xl border border-[#e4e4e7] bg-white text-[13.5px] text-[#09090b] placeholder-[#a1a1aa] focus:outline-none focus:border-[#1c63ed] focus:ring-1 focus:ring-[#1c63ed] shadow-2xs transition-all font-geist"
         />
         {searchQuery && (
           <button

@@ -27,6 +27,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/alternatives`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/best`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/guides`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/research`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/formats`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${baseUrl}/submit`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
@@ -81,6 +82,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
+  // Dynamic Blog Articles
+  const blogRoutes: MetadataRoute.Sitemap = getAllArticles().map((art) => ({
+    url: `${baseUrl}/blog/${art.slug}`,
+    lastModified: art.updatedAt || now,
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }));
+
   // Dynamic File Formats
   const formatRoutes: MetadataRoute.Sitemap = getAllFormats().map((fmt) => ({
     url: `${baseUrl}/formats/${fmt.slug}`,
@@ -96,6 +105,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...alternativeRoutes,
     ...bestRoutes,
     ...articleRoutes,
+    ...blogRoutes,
     ...formatRoutes,
   ];
 }

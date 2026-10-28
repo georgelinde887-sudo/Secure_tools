@@ -609,13 +609,14 @@ export function HeroBanner({
     <div
       className="hero-banner w-full rounded-[22px] border border-[#e4e4e7] bg-white p-5 sm:p-6 lg:py-6 lg:px-8 shadow-xs overflow-hidden"
       style={{ fontFamily: 'var(--font-geist-sans), "Geist", -apple-system, sans-serif' }}
+      suppressHydrationWarning
     >
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 lg:gap-8">
-        {/* Left Side: Badge, Headline, Description & Mint CTA Button */}
+        {/* Left Side: Badge, Headline, Description & Royal Blue CTA Button */}
         <div className="flex-1 min-w-0 max-w-[560px] lg:max-w-[620px]">
           {badgeText && (
             <div className="flex items-center gap-2 mb-2 font-mono text-[11px] sm:text-[11.5px] uppercase tracking-wider text-[#71717a]">
-              <svg className="w-3.5 h-3.5 text-[#02ccc1] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg className="w-3.5 h-3.5 text-[#1c63ed] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
                 <path d="m22 12.5-8.58 3.91a2 2 0 0 1-1.66 0L2 12.5" />
                 <path d="m22 17.5-8.58 3.91a2 2 0 0 1-1.66 0L2 17.5" />
@@ -642,7 +643,7 @@ export function HeroBanner({
             <Link
               href={ctaHref}
               role="button"
-              className="inline-flex items-center gap-2 px-4 py-2 sm:px-4.5 sm:py-2.5 rounded-[10px] bg-[#02ccc1] hover:bg-[#00baa9] text-white font-medium text-[13px] sm:text-[13.5px] tracking-tight transition-all duration-150 shadow-xs cursor-pointer group"
+              className="inline-flex items-center gap-2.5 px-4.5 py-2 sm:px-5 sm:py-2.5 rounded-[14px] bg-[#1c63ed] hover:bg-[#1554cc] active:bg-[#1247b5] text-white font-medium text-[13px] sm:text-[13.5px] tracking-tight transition-all duration-150 shadow-xs cursor-pointer group"
               style={{ fontFamily: 'var(--font-geist-sans), "Geist", sans-serif', fontWeight: 500 }}
             >
               <span>{ctaText}</span>
@@ -672,7 +673,7 @@ export function HeroBanner({
                       <path
                         key={i}
                         d={d}
-                        stroke={isTargetActive ? "#02ccc1" : "#cbd5e1"}
+                        stroke={isTargetActive ? "#1c63ed" : "#cbd5e1"}
                         strokeWidth={isTargetActive ? "1.8" : "1.5"}
                         fill="none"
                         strokeLinecap="round"
@@ -685,7 +686,7 @@ export function HeroBanner({
                       cx={startPoint.x}
                       cy={startPoint.y}
                       r="2.8"
-                      fill="#02ccc1"
+                      fill="#1c63ed"
                       stroke="#ffffff"
                       strokeWidth="1.5"
                     />
@@ -699,7 +700,7 @@ export function HeroBanner({
                         cx={dot.x}
                         cy={dot.y}
                         r={isTargetActive ? "3" : "2.4"}
-                        fill={isTargetActive ? "#02ccc1" : "#94a3b8"}
+                        fill={isTargetActive ? "#1c63ed" : "#94a3b8"}
                         stroke="#ffffff"
                         strokeWidth={isTargetActive ? "1.2" : "1"}
                       />
@@ -769,7 +770,7 @@ export function HeroBanner({
                         : "hover:scale-[1.02] transition-transform duration-100 z-20"
                     } ${
                       active
-                        ? "border-[#02ccc1] bg-[#02ccc1] text-white shadow-xs"
+                        ? "border-[#1c63ed] bg-[#1c63ed] text-white shadow-xs"
                         : "border-[#e4e4e7] bg-white hover:border-[#a1a1aa] shadow-2xs"
                     }`}
                   >

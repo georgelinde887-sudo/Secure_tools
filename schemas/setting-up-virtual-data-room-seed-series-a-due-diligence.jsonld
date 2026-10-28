@@ -1,0 +1,124 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SecureTools.live",
+      "url": "https://securetools.live",
+      "logo": "https://securetools.live/securetools-hero-logo.png",
+      "description": "Independent software discovery, comparison, and research platform covering the digital file and document ecosystem.",
+      "sameAs": []
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SecureTools.live",
+      "url": "https://securetools.live",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://securetools.live/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Setting Up a Virtual Data Room for Seed & Series A Due Diligence",
+          "description": "Set up a virtual data room for seed and Series A diligence: folder structure, checklists, 2026 prices, and what real users and founders say.",
+          "image": "https://securetools.live/blog-images/virtual-data-room-seed-series-a-header.png",
+          "datePublished": "2026-10-25",
+          "dateModified": "2026-10-25",
+          "mainEntityOfPage": "https://securetools.live/blog/setting-up-virtual-data-room-seed-series-a-due-diligence",
+          "author": {
+            "@type": "Person",
+            "name": "Mohamed Siraj",
+            "url": "https://www.linkedin.com/in/mohamed-siraj-1a1910234/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "SecureTools.live",
+            "url": "https://securetools.live"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://securetools.live"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://securetools.live/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Setting Up a Virtual Data Room for Seed & Series A Due Diligence"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Do seed-stage startups need a virtual data room?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not always on day one. A well-organized shared folder can be enough for pre-seed and seed, and upgrading for Series A is a common recommendation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between a seed and a Series A data room?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A seed room presents; a Series A room proves. Series A adds financial depth, cohorts, unit economics, contracts and IP chain of title."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How many documents should a Series A data room have?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "There is no standard. Published guides range from about 25 to 70, depending on who is writing."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What goes in the first two folders of a data room?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The cap table and financials, labelled clearly, with one current version each."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should every investor get the same data room access?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Stage the access: summary materials first, full folders after serious engagement or a term sheet."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if my cap table is messy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fix it before diligence. Errors found mid-diligence can force new legal paperwork or lead investors to reprice or withdraw."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -34,6 +34,7 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { getAllCategories, getAllSoftware } from '@/lib/data';
 import { ListingItemType } from '@/types';
 import { doUrlsMatch, checkDuplicateInItems, MatchResult } from '@/lib/url-match';
+import { resolveBrandDomain, getBrandFaviconUrls } from '@/lib/brand-icons';
 import confetti from 'canvas-confetti';
 
 const getCategoryIcon = (slug?: string) => {
@@ -514,183 +515,7 @@ function getInitials(name: string): string {
 
 // Dynamic domain resolver for integrations, tools, and alternatives
 function resolveDomainForTool(name: string, domain?: string): string {
-  if (domain && domain.includes('.') && !domain.endsWith('.com.com')) {
-    let clean = domain.trim();
-    if (clean.includes('://')) {
-      try {
-        clean = new URL(clean).hostname;
-      } catch {}
-    }
-    return clean.replace(/^www\./, '');
-  }
-
-  const lower = name.toLowerCase().trim();
-
-  // 1. UI Frameworks, CSS & Design
-  if (lower.includes('bootstrap')) return 'getbootstrap.com';
-  if (lower.includes('tailwind')) return 'tailwindcss.com';
-  if (lower.includes('material ui') || lower.includes('mui')) return 'mui.com';
-  if (lower.includes('ant design') || lower.includes('antd')) return 'ant.design';
-  if (lower.includes('chakra')) return 'chakra-ui.com';
-  if (lower.includes('shadcn')) return 'ui.shadcn.com';
-  if (lower.includes('radix')) return 'radix-ui.com';
-
-  // 2. Java Ecosystem & Enterprise Frameworks
-  if (lower.includes('maven')) return 'maven.apache.org';
-  if (lower.includes('glassfish')) return 'glassfish.org';
-  if (lower.includes('jodconverter')) return 'jodconverter.org';
-  if (lower.includes('openoffice')) return 'openoffice.org';
-  if (lower.includes('libreoffice')) return 'libreoffice.org';
-  if (lower.includes('primefaces')) return 'primefaces.org';
-  if (lower.includes('eclipse') || lower.includes('eclipselink')) return 'eclipse.org';
-  if (lower.includes('java ee') || lower.includes('jakarta') || lower.includes('ejb') || lower.includes('faces') || lower.includes('jsf')) return 'jakarta.ee';
-  if (lower === 'java' || lower.includes('openjdk') || lower.includes('jdk')) return 'oracle.com';
-  if (lower.includes('spring') || lower.includes('springboot')) return 'spring.io';
-  if (lower.includes('hibernate')) return 'hibernate.org';
-  if (lower.includes('tomcat')) return 'tomcat.apache.org';
-  if (lower.includes('jetty')) return 'eclipse.dev/jetty';
-  if (lower.includes('wildfly') || lower.includes('jboss')) return 'wildfly.org';
-  if (lower.includes('quarkus')) return 'quarkus.io';
-  if (lower.includes('gradle')) return 'gradle.org';
-
-  // 3. Web Frameworks & Runtimes
-  if (lower.includes('react')) return 'react.dev';
-  if (lower.includes('vue')) return 'vuejs.org';
-  if (lower.includes('angular')) return 'angular.dev';
-  if (lower.includes('svelte')) return 'svelte.dev';
-  if (lower.includes('next.js') || lower === 'nextjs') return 'nextjs.org';
-  if (lower.includes('nuxt')) return 'nuxt.com';
-  if (lower.includes('astro')) return 'astro.build';
-  if (lower.includes('vite')) return 'vite.dev';
-  if (lower.includes('webpack')) return 'webpack.js.org';
-  if (lower.includes('node')) return 'nodejs.org';
-  if (lower.includes('deno')) return 'deno.com';
-  if (lower.includes('bun')) return 'bun.sh';
-
-  // 4. Cloud, Hosting & Serverless
-  if (lower.includes('vercel')) return 'vercel.com';
-  if (lower.includes('aws') || lower.includes('amazon') || lower.includes('s3') || lower.includes('dynamodb') || lower.includes('lambda')) return 'aws.amazon.com';
-  if (lower.includes('cloudflare') || lower.includes('r2')) return 'cloudflare.com';
-  if (lower.includes('supabase')) return 'supabase.com';
-  if (lower.includes('firebase')) return 'firebase.google.com';
-  if (lower.includes('azure')) return 'azure.microsoft.com';
-  if (lower.includes('google cloud') || lower.includes('gcp')) return 'cloud.google.com';
-  if (lower.includes('digitalocean')) return 'digitalocean.com';
-  if (lower.includes('heroku')) return 'heroku.com';
-  if (lower.includes('render')) return 'render.com';
-  if (lower.includes('fly.io') || lower === 'fly') return 'fly.io';
-  if (lower.includes('railway')) return 'railway.app';
-  if (lower.includes('netlify')) return 'netlify.com';
-
-  // 5. Databases & Storage
-  if (lower.includes('postgres') || lower.includes('postgresql')) return 'postgresql.org';
-  if (lower.includes('mysql')) return 'mysql.com';
-  if (lower.includes('redis') || lower.includes('upstash')) return 'redis.io';
-  if (lower.includes('tinybird')) return 'tinybird.co';
-  if (lower.includes('mongodb') || lower.includes('mongo')) return 'mongodb.com';
-  if (lower.includes('sqlite') || lower.includes('turso')) return 'turso.tech';
-  if (lower.includes('mariadb')) return 'mariadb.org';
-  if (lower.includes('cassandra')) return 'cassandra.apache.org';
-  if (lower.includes('couchdb')) return 'couchdb.apache.org';
-  if (lower.includes('prisma')) return 'prisma.io';
-  if (lower.includes('drizzle')) return 'orm.drizzle.team';
-
-  // 6. Email & Communications
-  if (lower.includes('resend')) return 'resend.com';
-  if (lower.includes('sendgrid')) return 'sendgrid.com';
-  if (lower.includes('postmark')) return 'postmarkapp.com';
-  if (lower.includes('mailgun')) return 'mailgun.com';
-  if (lower.includes('twilio')) return 'twilio.com';
-  if (lower.includes('slack')) return 'slack.com';
-  if (lower.includes('discord')) return 'discord.com';
-  if (lower.includes('teams')) return 'microsoft.com';
-  if (lower.includes('zoom')) return 'zoom.us';
-
-  // 7. Payments, Auth & Identity
-  if (lower.includes('stripe')) return 'stripe.com';
-  if (lower.includes('paypal')) return 'paypal.com';
-  if (lower.includes('okta')) return 'okta.com';
-  if (lower.includes('auth0')) return 'auth0.com';
-  if (lower.includes('clerk')) return 'clerk.com';
-  if (lower.includes('keycloak')) return 'keycloak.org';
-  if (lower.includes('nextauth') || lower.includes('auth.js')) return 'authjs.dev';
-
-  // 8. Code, DevOps & Monitoring
-  if (lower.includes('github')) return 'github.com';
-  if (lower.includes('gitlab')) return 'gitlab.com';
-  if (lower.includes('bitbucket')) return 'bitbucket.org';
-  if (lower.includes('docker')) return 'docker.com';
-  if (lower.includes('kubernetes') || lower.includes('k8s')) return 'kubernetes.io';
-  if (lower.includes('terraform')) return 'terraform.io';
-  if (lower.includes('ansible')) return 'ansible.com';
-  if (lower.includes('jenkins')) return 'jenkins.io';
-  if (lower.includes('sentry')) return 'sentry.io';
-  if (lower.includes('datadog')) return 'datadoghq.com';
-  if (lower.includes('grafana')) return 'grafana.com';
-  if (lower.includes('prometheus')) return 'prometheus.io';
-
-  // 9. Productivity, CRM & Design
-  if (lower.includes('google drive') || lower.includes('gdrive')) return 'drive.google.com';
-  if (lower.includes('microsoft 365') || lower.includes('office 365')) return 'microsoft.com';
-  if (lower.includes('salesforce')) return 'salesforce.com';
-  if (lower.includes('hubspot')) return 'hubspot.com';
-  if (lower.includes('notion')) return 'notion.so';
-  if (lower.includes('linear')) return 'linear.app';
-  if (lower.includes('jira') || lower.includes('confluence') || lower.includes('trello') || lower.includes('atlassian')) return 'atlassian.com';
-  if (lower.includes('asana')) return 'asana.com';
-  if (lower.includes('figma')) return 'figma.com';
-  if (lower.includes('postman')) return 'postman.com';
-  if (lower.includes('docusign')) return 'docusign.com';
-  if (lower.includes('dropbox')) return 'dropbox.com';
-  if (lower.includes('box') && !lower.includes('mailbox')) return 'box.com';
-  if (lower.includes('zapier')) return 'zapier.com';
-  if (lower.includes('make.com') || lower === 'make') return 'make.com';
-
-  // 10. AI & LLMs
-  if (lower.includes('openai') || lower.includes('gpt')) return 'openai.com';
-  if (lower.includes('anthropic') || lower.includes('claude')) return 'anthropic.com';
-  if (lower.includes('huggingface') || lower.includes('hugging face')) return 'huggingface.co';
-  if (lower.includes('ollama')) return 'ollama.com';
-  if (lower.includes('pinecone')) return 'pinecone.io';
-  if (lower.includes('weaviate')) return 'weaviate.io';
-  if (lower.includes('qdrant')) return 'qdrant.tech';
-
-  // 11. Known Competitors & Security Tools
-  if (lower.includes('docsend')) return 'docsend.com';
-  if (lower.includes('digify')) return 'digify.com';
-  if (lower.includes('tresorit')) return 'tresorit.com';
-  if (lower.includes('nextcloud')) return 'nextcloud.com';
-  if (lower.includes('owncloud')) return 'owncloud.com';
-  if (lower.includes('sharefile')) return 'sharefile.com';
-  if (lower.includes('onehub')) return 'onehub.com';
-  if (lower.includes('egnyte')) return 'egnyte.com';
-  if (lower.includes('securedocs')) return 'securedocs.com';
-  if (lower.includes('ideals')) return 'idealsvdr.com';
-  if (lower.includes('datasite')) return 'datasite.com';
-  if (lower.includes('intralinks')) return 'intralinks.com';
-  if (lower.includes('firmex')) return 'firmex.com';
-  if (lower.includes('wetransfer')) return 'wetransfer.com';
-  if (lower.includes('filemail')) return 'filemail.com';
-  if (lower.includes('fromsmash') || lower === 'smash') return 'fromsmash.com';
-  if (lower.includes('sendsafely')) return 'sendsafely.com';
-  if (lower.includes('kiteworks')) return 'kiteworks.com';
-  if (lower.includes('proton')) return 'proton.me';
-  if (lower.includes('mega')) return 'mega.io';
-  if (lower.includes('pcloud')) return 'pcloud.com';
-  if (lower.includes('adobe') || lower.includes('acrobat')) return 'adobe.com';
-  if (lower.includes('pandadoc')) return 'pandadoc.com';
-  if (lower.includes('signnow')) return 'signnow.com';
-  if (lower.includes('hellosign')) return 'hellosign.com';
-  if (lower.includes('cryptomator')) return 'cryptomator.org';
-  if (lower.includes('veracrypt')) return 'veracrypt.fr';
-  if (lower.includes('axcrypt')) return 'axcrypt.net';
-  if (lower.includes('nordlocker')) return 'nordlocker.com';
-
-  if (lower.includes('.')) {
-    return lower.replace(/^https?:\/\//, '').split('/')[0].replace(/^www\./, '');
-  }
-
-  return `${lower.replace(/[^a-z0-9]/g, '')}.com`;
+  return resolveBrandDomain(name, domain);
 }
 
 // Robust validator for alternatives: ensures only real software products are extracted
@@ -731,32 +556,28 @@ const isValidAlternative = (alt: string, currentProductName: string = ''): boole
 function ToolItemIcon({ name, domain, className = 'w-3.5 h-3.5' }: { name: string; domain?: string; className?: string }) {
   const [attempt, setAttempt] = useState(0);
   const lower = name.toLowerCase().trim();
-  const lowerDomain = (domain || '').toLowerCase().trim();
 
-  // 1. Direct Icon match for Developer Tools (CLI, API, MCP, Webhooks)
-  if (lower.includes('cli') || lower.includes('terminal') || lower.includes('command line') || lower.includes('shell') || lower.includes('console')) {
-    return <Terminal className={`${className} text-[#09090b] shrink-0`} strokeWidth={2} />;
-  }
-  if (lower === 'mcp' || lower.includes('model context protocol') || lowerDomain.includes('modelcontextprotocol')) {
-    return <Cpu className={`${className} text-[#09090b] shrink-0`} strokeWidth={2} />;
-  }
-  if (lower.includes('webhook') || lowerDomain.includes('webhook')) {
-    return <Webhook className={`${className} text-[#09090b] shrink-0`} strokeWidth={2} />;
-  }
-  if (lower === 'api' || lower.includes('rest api') || lower.includes('restful') || lower.includes('graphql') || lower.includes('grpc') || lower.includes('sdk')) {
-    return <Code2 className={`${className} text-[#09090b] shrink-0`} strokeWidth={2} />;
+  // Pure generic developer concepts without a specific brand name
+  const cleanRoot = name
+    .replace(/\b(rest api|restful api|api|sdk|extensions?|add-?ons?|plugins?|integrations?|connectors?|webhooks?|apps?|bots?|clients?|services?)\b/gi, '')
+    .trim();
+
+  if (!cleanRoot) {
+    if (lower.includes('cli') || lower.includes('terminal') || lower.includes('console')) {
+      return <Terminal className={`${className} text-[#09090b] shrink-0`} strokeWidth={2} />;
+    }
+    if (lower === 'mcp' || lower.includes('model context protocol')) {
+      return <Cpu className={`${className} text-[#09090b] shrink-0`} strokeWidth={2} />;
+    }
+    if (lower.includes('webhook')) {
+      return <Webhook className={`${className} text-[#09090b] shrink-0`} strokeWidth={2} />;
+    }
+    if (lower === 'api' || lower.includes('rest api') || lower.includes('graphql') || lower.includes('sdk')) {
+      return <Code2 className={`${className} text-[#09090b] shrink-0`} strokeWidth={2} />;
+    }
   }
 
-  const cleanDomain = resolveDomainForTool(name, domain);
-  const simpleSlug = getSimpleIconSlug(name);
-
-  // Candidate sources in prioritized order
-  const sources: string[] = [];
-  if (simpleSlug) {
-    sources.push(`https://cdn.simpleicons.org/${simpleSlug}`);
-  }
-  sources.push(`https://www.google.com/s2/favicons?domain=${encodeURIComponent(cleanDomain)}&sz=64`);
-  sources.push(`https://icons.duckduckgo.com/ip3/${encodeURIComponent(cleanDomain)}.ico`);
+  const sources = getBrandFaviconUrls(name, domain);
 
   if (attempt >= sources.length) {
     return (
@@ -899,21 +720,21 @@ export default function SubmitPage() {
         angle: 60,
         spread: 70,
         origin: { x: 0, y: 0.7 },
-        colors: ['#02ccc1', '#09090b', '#3b82f6', '#10b981', '#f59e0b', '#ec4899']
+        colors: ['#1c63ed', '#09090b', '#3b82f6', '#10b981', '#f59e0b', '#ec4899']
       });
       confetti({
         particleCount: 65,
         angle: 120,
         spread: 70,
         origin: { x: 1, y: 0.7 },
-        colors: ['#02ccc1', '#09090b', '#3b82f6', '#10b981', '#f59e0b', '#ec4899']
+        colors: ['#1c63ed', '#09090b', '#3b82f6', '#10b981', '#f59e0b', '#ec4899']
       });
       setTimeout(() => {
         confetti({
           particleCount: 90,
           spread: 90,
           origin: { y: 0.55 },
-          colors: ['#02ccc1', '#00baa9', '#09090b', '#6366f1', '#14b8a6']
+          colors: ['#1c63ed', '#1554cc', '#09090b', '#6366f1', '#14b8a6']
         });
       }, 200);
     } catch {}
@@ -2375,12 +2196,12 @@ FINAL REMINDER: Return EXACTLY ONE \`\`\`json code block starting with \`\`\`jso
         try {
           cleanDomain = new URL(matchedSoftware.websiteUrl).hostname.replace(/^www\./, '');
         } catch {
-          cleanDomain = `${lower.replace(/[^a-z0-9]/g, '')}.com`;
+          cleanDomain = resolveBrandDomain(displayName) || `${lower.replace(/[^a-z0-9]/g, '')}.com`;
         }
       } else if (matchedInteg) {
         cleanDomain = matchedInteg.domain;
       } else {
-        cleanDomain = `${lower.replace(/[^a-z0-9]/g, '')}.com`;
+        cleanDomain = resolveBrandDomain(displayName) || `${lower.replace(/[^a-z0-9]/g, '')}.com`;
       }
     }
 
@@ -2800,7 +2621,7 @@ FINAL REMINDER: Return EXACTLY ONE \`\`\`json code block starting with \`\`\`jso
               className={`w-full h-11 pl-10 pr-3.5 rounded-xl border bg-white text-[13.5px] text-[#09090b] placeholder:text-[#a1a1aa] focus:outline-none transition-all shadow-2xs font-geist font-normal ${
                 duplicateTargetMatch
                   ? 'border-[#ef4444] focus:border-[#ef4444] focus:ring-2 focus:ring-[#ef4444]/20'
-                  : 'border-[#e4e4e7] focus:border-[#02ccc1] focus:ring-2 focus:ring-[#02ccc1]/15'
+                  : 'border-[#e4e4e7] focus:border-[#1c63ed] focus:ring-2 focus:ring-[#1c63ed]/15'
               }`}
             />
           </div>
@@ -2949,7 +2770,7 @@ FINAL REMINDER: Return EXACTLY ONE \`\`\`json code block starting with \`\`\`jso
                         setError(res.error || 'Invalid JSON format');
                       }
                     }}
-                    className="text-[11.5px] text-[#02ccc1] hover:underline cursor-pointer font-geist font-medium"
+                    className="text-[11.5px] text-[#1c63ed] hover:underline cursor-pointer font-geist font-medium"
                   >
                     Format JSON
                   </button>
@@ -4571,7 +4392,7 @@ FINAL REMINDER: Return EXACTLY ONE \`\`\`json code block starting with \`\`\`jso
                 <div className="flex flex-wrap gap-2">
                   {COMMON_AI_PLATFORMS.map(p => {
                     const active = formData.mcpPlatforms.includes(p);
-                    const domain = AI_PLATFORM_FAVICON_DOMAINS[p] || `${p.toLowerCase().replace(/[^a-z0-9]/g, '')}.com`;
+                    const domain = AI_PLATFORM_FAVICON_DOMAINS[p] || resolveBrandDomain(p) || `${p.toLowerCase().replace(/[^a-z0-9]/g, '')}.com`;
                     return (
                       <button
                         type="button"
