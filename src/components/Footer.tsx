@@ -74,6 +74,15 @@ const FOOTER_BADGES = [
     imgClass: 'h-[32px] w-auto object-contain',
     rel: 'noopener noreferrer',
   },
+  {
+    href: 'https://www.tinyshelf.co/?ref=securetools.live',
+    src: 'https://www.tinyshelf.co/badge/tinyshelf-badge-dark-f4d1216a.svg',
+    alt: 'Featured on TinyShelf',
+    width: 216,
+    height: 64,
+    imgClass: 'h-[32px] w-auto object-contain',
+    rel: 'noopener noreferrer',
+  },
 ];
 
 export function Footer() {
@@ -382,6 +391,7 @@ export function Footer() {
                 href={badge.href}
                 target="_blank"
                 rel={badge.rel}
+                title={badge.alt}
                 className="shrink-0 hover:opacity-80 transition-opacity flex items-center justify-center"
               >
                 <img
