@@ -81,7 +81,7 @@ const FOOTER_BADGES = [
     width: 216,
     height: 64,
     imgClass: 'h-[32px] w-auto object-contain',
-    rel: 'noopener noreferrer',
+    rel: 'dofollow',
   },
 ];
 
