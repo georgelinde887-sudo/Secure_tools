@@ -2,6 +2,80 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+const FOOTER_BADGES = [
+  {
+    href: 'https://nicklaunches.com/products/securetools-live/',
+    src: 'https://nicklaunches.com/badges/featured.png',
+    alt: 'SecureTools.live on Nick Launches',
+    width: 244,
+    height: 56,
+    imgClass: 'h-[32px] w-auto object-contain',
+    rel: 'noopener noreferrer',
+  },
+  {
+    href: 'https://verifieddr.com/website/securetools-live',
+    src: 'https://verifieddr.com/badge/securetools-live.svg?metric=truedr',
+    alt: 'Verified DR - Verified Domain Rating for securetools.live',
+    width: 220,
+    height: 68,
+    imgClass: 'h-[32px] w-auto object-contain',
+    rel: 'noopener noreferrer',
+  },
+  {
+    href: 'https://huzzler.so/products/K3n9FUnWdZ/securetools?utm_source=huzzler_product_website&utm_medium=badge&utm_campaign=free_listing',
+    src: 'https://huzzler.so/assets/images/embeddable-badges/featured.png',
+    alt: 'Huzzler Embed Badge',
+    width: 159,
+    height: 55,
+    imgClass: 'h-[32px] w-auto object-contain',
+    rel: 'noopener noreferrer',
+  },
+  {
+    href: 'https://uno.directory',
+    src: 'https://uno.directory/uno-directory.svg',
+    alt: 'Listed on Uno Directory',
+    width: 120,
+    height: 30,
+    imgClass: 'h-[28px] w-auto object-contain',
+    rel: 'noopener noreferrer',
+  },
+  {
+    href: 'https://lovableapp.org',
+    src: 'https://lovableapp.org/lovable-app-badge.svg',
+    alt: 'Lovable App Badge',
+    width: 160,
+    height: 32,
+    imgClass: 'h-[28px] w-auto object-contain',
+    rel: 'noopener noreferrer',
+  },
+  {
+    href: 'https://startuptrusted.com?ref=securetools.live',
+    src: 'https://startuptrusted.com/api/badge?type=featured&style=light',
+    alt: 'SecureTools.live | Software Discovery for Files, Documents & Security on StartupTrusted',
+    width: 240,
+    height: 54,
+    imgClass: 'h-[32px] w-auto object-contain',
+    rel: 'noopener noreferrer',
+  },
+  {
+    href: 'https://dododirectory.com',
+    src: 'https://dododirectory.com/badge-light.png',
+    alt: 'Featured on DodoDirectory',
+    width: 200,
+    height: 54,
+    imgClass: 'h-[32px] w-auto object-contain',
+    rel: 'dofollow',
+  },
+  {
+    href: 'https://startupbase.io/products/secure-tools?utm_source=startupbase&utm_medium=badge&utm_campaign=launch-badge-light',
+    src: 'https://statics.startupbase.io/site/badges/launched-on-sb.svg',
+    alt: 'Launched on StartupBase',
+    height: 55,
+    imgClass: 'h-[32px] w-auto object-contain',
+    rel: 'noopener noreferrer',
+  },
+];
+
 export function Footer() {
   return (
     <footer className="w-full border-t border-[#e4e4e7] bg-[#fafafa] mt-16 pt-12 pb-10 text-[#52525b] font-geist font-normal">
@@ -12,11 +86,12 @@ export function Footer() {
           <div className="lg:col-span-1 space-y-3">
             <Link href="/" className="inline-block group" aria-label="SecureTools Home">
               <Image
-                src="/securetools-hero-logo.png"
+                src="/securetools-logo.png"
                 alt="SecureTools Logo"
-                width={40}
-                height={40}
-                className="w-10 h-10 object-contain rounded-[9px] shadow-2xs hover:opacity-90 transition-opacity"
+                width={154}
+                height={35}
+                className="h-[34px] w-auto object-contain hover:opacity-90 transition-opacity"
+                unoptimized
               />
             </Link>
             <p className="text-[12.5px] text-[#52525b] leading-relaxed">
@@ -295,6 +370,29 @@ export function Footer() {
               />
               <span>Grok</span>
             </a>
+          </div>
+        </div>
+
+        {/* Auto-sliding Badges Marquee Row */}
+        <div className="border-t border-[#e4e4e7] pt-5 pb-5 mb-5 overflow-hidden relative [mask-image:linear-gradient(to_right,transparent,black_3%,black_97%,transparent)]">
+          <div className="animate-footer-marquee flex items-center gap-7 shrink-0">
+            {[...FOOTER_BADGES, ...FOOTER_BADGES].map((badge, idx) => (
+              <a
+                key={`${badge.href}-${idx}`}
+                href={badge.href}
+                target="_blank"
+                rel={badge.rel}
+                className="shrink-0 hover:opacity-80 transition-opacity flex items-center justify-center"
+              >
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  width={badge.width}
+                  height={badge.height}
+                  className={`${badge.imgClass} max-w-none`}
+                />
+              </a>
+            ))}
           </div>
         </div>
 

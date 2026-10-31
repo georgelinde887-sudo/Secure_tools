@@ -27,15 +27,16 @@ export function Header({
           <Menu01Icon size={18} strokeWidth={1.6} />
         </button>
 
-        {/* Brand Mark (Icon Only) */}
+        {/* Brand Logo */}
         <Link href="/" className="flex items-center group" aria-label="SecureTools Home">
           <Image
-            src="/securetools-hero-logo.png"
+            src="/securetools-logo.png"
             alt="SecureTools Logo"
-            width={38}
-            height={38}
-            className="w-[38px] h-[38px] object-contain rounded-[8px] shadow-2xs hover:opacity-90 transition-opacity"
+            width={154}
+            height={35}
+            className="h-[34px] w-auto object-contain hover:opacity-90 transition-opacity"
             priority
+            unoptimized
           />
         </Link>
       </div>

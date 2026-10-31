@@ -65,17 +65,17 @@ export function LoginClient() {
   return (
     <div className="min-h-screen flex items-center justify-center px-4 bg-[#fafafa] font-geist">
       <div className="w-full max-w-sm">
-        {/* Logo + Wordmark */}
+        {/* Brand Logo */}
         <div className="flex flex-col items-center mb-7">
-          <Link href="/" className="flex items-center gap-2.5 mb-5">
+          <Link href="/" className="flex items-center justify-center mb-5 hover:opacity-90 transition-opacity">
             <Image
-              src="/securetools-hero-logo.png"
+              src="/securetools-logo.png"
               alt="SecureTools"
-              width={36}
+              width={160}
               height={36}
-              className="rounded-xl shadow-sm"
+              className="h-[38px] w-auto object-contain"
+              unoptimized
             />
-            <span className="text-[17px] font-extrabold tracking-tight text-[#09090b]">SecureTools</span>
           </Link>
           <h1 className="text-[22px] font-bold tracking-tight text-[#09090b] text-center">
             Sign in to your account

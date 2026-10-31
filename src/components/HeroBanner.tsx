@@ -723,19 +723,19 @@ export function HeroBanner({
                 touchAction: "none",
               }}
               title="SecureTools Logo (Drag to move, double-click to reset)"
-              className={`absolute left-0 sm:left-2 lg:left-4 z-20 w-[85px] sm:w-[95px] lg:w-[100px] h-[85px] sm:h-[95px] lg:h-[100px] flex items-center justify-center select-none cursor-grab active:cursor-grabbing transition-transform ${
+              className={`absolute left-0 sm:left-1 lg:left-2 z-20 w-[120px] sm:w-[130px] lg:w-[140px] h-[45px] sm:h-[50px] flex items-center justify-center select-none cursor-grab active:cursor-grabbing transition-transform ${
                 isDraggingLogo ? "scale-105 drop-shadow-md z-30" : "hover:scale-102"
               }`}
             >
               <Image
-                src="/securetools-hero-logo.png"
+                src="/securetools-logo.png"
                 alt="SecureTools Logo"
-                width={100}
-                height={100}
+                width={140}
+                height={35}
                 priority
                 draggable={false}
-                className="object-contain pointer-events-none select-none"
-                sizes="(max-width: 640px) 85px, (max-width: 1024px) 95px, 100px"
+                className="w-full h-auto object-contain pointer-events-none select-none"
+                unoptimized
               />
             </div>
 

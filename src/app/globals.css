@@ -225,6 +225,26 @@ a[role="button"] {
   background: #a1a1aa;
 }
 
+/* Infinite Badge Auto-Slide Marquee */
+@keyframes footer-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-footer-marquee {
+  display: flex;
+  width: max-content;
+  animation: footer-marquee 30s linear infinite;
+}
+
+.animate-footer-marquee:hover {
+  animation-play-state: paused;
+}
+
 @media print {
   header, aside, footer, .no-print {
     display: none !important;
